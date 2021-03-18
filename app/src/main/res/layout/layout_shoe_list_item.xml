@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="shoe_item"
+            type="com.udacity.shoestore.models.Shoe" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/gap_16dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="@dimen/gap_5dp"
+        app:cardElevation="@dimen/gap_5dp">
+
+        <!--Using ConstraintLayout to arrange the elements mainly to eliminate Nested
+        Layouts as it supports flat view hierarchy unlike other layouts-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/gap_10dp">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/shoe_list_item_guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="100dp" />
+
+            <TextView
+                android:id="@+id/shoe_list_item_name_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/gap_10dp"
+                android:text="@string/shoe_name"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/shoe_list_item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/gap_10dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                app:layout_constraintStart_toEndOf="@+id/shoe_list_item_guideline"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/shoe_list_item_company_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/gap_10dp"
+                android:text="@string/shoe_company"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/shoe_list_item_name_header" />
+
+            <TextView
+                android:id="@+id/shoe_list_item_company"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/gap_10dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                app:layout_constraintStart_toEndOf="@+id/shoe_list_item_guideline"
+                app:layout_constraintTop_toBottomOf="@+id/shoe_list_item_name" />
+
+            <TextView
+                android:id="@+id/shoe_list_item_size_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/gap_10dp"
+                android:text="@string/shoe_size"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/shoe_list_item_company_header" />
+
+            <TextView
+                android:id="@+id/shoe_list_item_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/gap_10dp"
+                android:ellipsize="end"
+                app:layout_constraintStart_toEndOf="@+id/shoe_list_item_guideline"
+                app:layout_constraintTop_toBottomOf="@+id/shoe_list_item_company" />
+
+            <TextView
+                android:id="@+id/shoe_list_item_description_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/gap_10dp"
+                android:text="@string/shoe_desc"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/shoe_list_item_size_header" />
+
+            <TextView
+                android:id="@+id/shoe_list_item_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/gap_10dp"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:minLines="1"
+                app:layout_constraintStart_toEndOf="@+id/shoe_list_item_guideline"
+                app:layout_constraintTop_toBottomOf="@+id/shoe_list_item_size" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

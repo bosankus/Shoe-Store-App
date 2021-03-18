@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/authFragment">
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.udacity.shoestore.views.welcome.WelcomeFragment"
+        android:label="@string/welcome_header"
+        tools:layout="@layout/fragment_welcome">
+        <action
+            android:id="@+id/action_welcomeFragment_to_instructionsFragment"
+            app:destination="@id/instructionsFragment"
+            app:enterAnim="@anim/enter_anim"
+            app:exitAnim="@anim/exit_anim"
+            app:popEnterAnim="@anim/enter_anim"
+            app:popExitAnim="@anim/exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/instructionsFragment"
+        android:name="com.udacity.shoestore.views.instruction.InstructionsFragment"
+        android:label="@string/instruction_header"
+        tools:layout="@layout/fragment_instruction">
+        <action
+            android:id="@+id/action_instructionsFragment_to_shoeListFragment"
+            app:destination="@id/shoeListFragment"
+            app:enterAnim="@anim/enter_anim"
+            app:popEnterAnim="@anim/enter_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoeListFragment"
+        android:name="com.udacity.shoestore.views.shoe_list.ShoeListFragment"
+        android:label="@string/shoe_list_header"
+        tools:layout="@layout/fragment_shoe_list">
+        <action
+            android:id="@+id/action_shoeListFragment_to_shoeDetailsFragment"
+            app:destination="@id/shoeDetailsFragment"
+            app:enterAnim="@anim/up_anim"
+            app:exitAnim="@anim/down_anim"
+            app:popEnterAnim="@anim/up_anim"
+            app:popExitAnim="@anim/down_anim" />
+        <action
+            android:id="@+id/action_shoeListFragment_to_authFragment"
+            app:destination="@id/authFragment"
+            app:enterAnim="@anim/enter_anim"
+            app:exitAnim="@anim/exit_anim"
+            app:popEnterAnim="@anim/enter_anim"
+            app:popExitAnim="@anim/exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoeDetailsFragment"
+        android:name="com.udacity.shoestore.views.shoe_details.ShoeDetailsFragment"
+        android:label="@string/shoe_details_header"
+        tools:layout="@layout/fragment_shoe_details">
+        <action
+            android:id="@+id/action_shoeDetailsFragment_to_shoeListFragment"
+            app:destination="@id/shoeListFragment"
+            app:enterAnim="@anim/up_anim"
+            app:exitAnim="@anim/down_anim"
+            app:popEnterAnim="@anim/up_anim"
+            app:popExitAnim="@anim/down_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/authFragment"
+        android:name="com.udacity.shoestore.views.login.AuthFragment"
+        android:label="@string/auth_header"
+        tools:layout="@layout/fragment_auth">
+        <action
+            android:id="@+id/action_authFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment"
+            app:enterAnim="@anim/enter_anim"
+            app:exitAnim="@anim/exit_anim"
+            app:popEnterAnim="@anim/enter_anim"
+            app:popExitAnim="@anim/exit_anim" />
+        <action
+            android:id="@+id/action_authFragment_to_shoeListFragment"
+            app:destination="@id/shoeListFragment"
+            app:exitAnim="@anim/exit_anim"
+            app:popExitAnim="@anim/exit_anim" />
+    </fragment>
+</navigation>

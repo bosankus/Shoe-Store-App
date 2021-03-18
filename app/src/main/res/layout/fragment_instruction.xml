@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--Using LinearLayout for arranging three elements in a row for
+    cleaner approach in the centre gravity position-->
+
+    <LinearLayout
+        android:id="@+id/fragment_instructions_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="vertical"
+        tools:ignore="UselessLeaf">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/gap_20dp"
+            android:gravity="center"
+            android:padding="@dimen/gap_10dp"
+            android:text="@string/instruction_header"
+            android:textSize="@dimen/text26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/gap_20dp"
+            android:layout_marginEnd="@dimen/gap_20dp"
+            android:gravity="center"
+            android:text="@string/instruction_note"
+            android:textSize="@dimen/text16sp" />
+
+        <Button
+            android:id="@+id/fragment_instructions_btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/gap_20dp"
+            android:background="@color/colorAccent"
+            android:text="@string/next"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text16sp"
+            tools:ignore="ButtonStyle" />
+
+    </LinearLayout>
+
+</layout>

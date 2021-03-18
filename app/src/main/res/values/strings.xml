@@ -1,0 +1,35 @@
+<resources>
+
+    <!--Shared Strings-->
+    <string name="app_name">ShoeStore</string>
+    <string name="logout">Logout</string>
+
+    <!--Auth Fragment-->
+    <string name="email_id">Email ID</string>
+    <string name="password">Password</string>
+    <string name="auth_header">Login</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="or">Or</string>
+
+    <!--Welcome Fragment-->
+    <string name="welcome_header">Welcome</string>
+    <string name="welcome_note">This is welcome screen</string>
+
+    <!--Instruction Fragment-->
+    <string name="instruction_header">Instructions</string>
+    <string name="instruction_note">This is instruction screen</string>
+    <string name="next">Next</string>
+
+    <!--Shoe List Fragment-->
+    <string name="shoe_list_header">Shoe List</string>
+
+    <!--Shoe Details Fragment-->
+    <string name="shoe_details_header">Shoe Details</string>
+    <string name="shoe_name">Shoe Name</string>
+    <string name="shoe_company">Company</string>
+    <string name="shoe_size">Size</string>
+    <string name="shoe_desc">Description</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+
+</resources>
