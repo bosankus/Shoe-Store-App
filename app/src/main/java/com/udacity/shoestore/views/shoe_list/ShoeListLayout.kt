@@ -9,7 +9,6 @@ import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.LayoutShoeListItemBinding
 import com.udacity.shoestore.models.Shoe
 
-
 class ShoeListLayout : LinearLayout {
     constructor(context: Context) : super(context)
     constructor(context: Context, attrs: AttributeSet?) : super(context, attrs)

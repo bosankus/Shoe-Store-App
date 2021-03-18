@@ -29,10 +29,6 @@ class ShoeListViewModel : ViewModel(), Observable {
             }
         }
 
-    /*init {
-        _listOfShoes.value = mutableListOf(SHOE_ONE, SHOE_TWO)
-    }*/
-
     fun listOfShoes(): LiveData<MutableList<Shoe>> {
         Timber.i("List fetched")
         _isItemAdded.value = false
@@ -53,12 +49,4 @@ class ShoeListViewModel : ViewModel(), Observable {
     override fun removeOnPropertyChangedCallback(callback: Observable.OnPropertyChangedCallback?) {
         registry.remove(callback)
     }
-
-    /*companion object {
-        //Pre-Populated Shoes
-        val SHOE_ONE =
-            Shoe("Chuck Taylor", 10.5, "Converse", "Retro Athletic Shoe", listOf("shoe"))
-        val SHOE_TWO =
-            Shoe("Charged Assert 8", 12.0, "Under Armour", "Running Shoe", listOf("shoe"))
-    }*/
 }

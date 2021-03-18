@@ -44,4 +44,9 @@ class InstructionsFragment : Fragment() {
         preferences.edit().putBoolean(NEW_USER, false).apply()
         findNavController().navigate(R.id.action_instructionsFragment_to_shoeListFragment)
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        binding = null
+    }
 }

@@ -19,9 +19,9 @@ import com.udacity.shoestore.viewmodels.ShoeListViewModel
 
 class ShoeListFragment : Fragment() {
 
+    private val viewModel: ShoeListViewModel by activityViewModels()
     private lateinit var preferences: SharedPreferences
     private var binding: FragmentShoeListBinding? = null
-    private val viewModel: ShoeListViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,

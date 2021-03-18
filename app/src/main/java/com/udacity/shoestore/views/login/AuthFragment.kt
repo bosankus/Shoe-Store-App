@@ -57,8 +57,6 @@ class AuthFragment : Fragment() {
         }
     }
 
-
-
     private fun goToWelcomeScreen() {
         findNavController().navigate(R.id.action_authFragment_to_welcomeFragment)
     }
