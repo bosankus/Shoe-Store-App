@@ -49,6 +49,7 @@
                 android:layout_margin="@dimen/gap_10dp"
                 android:ellipsize="end"
                 android:maxLines="1"
+                android:text="@{shoe_item.name}"
                 app:layout_constraintStart_toEndOf="@+id/shoe_list_item_guideline"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -69,6 +70,7 @@
                 android:layout_margin="@dimen/gap_10dp"
                 android:ellipsize="end"
                 android:maxLines="1"
+                android:text="@{shoe_item.company}"
                 app:layout_constraintStart_toEndOf="@+id/shoe_list_item_guideline"
                 app:layout_constraintTop_toBottomOf="@+id/shoe_list_item_name" />
 
@@ -88,6 +90,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/gap_10dp"
                 android:ellipsize="end"
+                android:text="@{``+shoe_item.size}"
                 app:layout_constraintStart_toEndOf="@+id/shoe_list_item_guideline"
                 app:layout_constraintTop_toBottomOf="@+id/shoe_list_item_company" />
 
@@ -109,6 +112,7 @@
                 android:ellipsize="end"
                 android:maxLines="3"
                 android:minLines="1"
+                android:text="@{shoe_item.description}"
                 app:layout_constraintStart_toEndOf="@+id/shoe_list_item_guideline"
                 app:layout_constraintTop_toBottomOf="@+id/shoe_list_item_size" />
 

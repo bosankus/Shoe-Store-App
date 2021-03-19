@@ -29,10 +29,8 @@ class ShoeListLayout : LinearLayout {
     fun loadShoe(shoe: Shoe) {
         binding.apply {
             addView(this.root)
-            shoeListItemName.text = shoe.name
-            shoeListItemCompany.text = shoe.company
-            shoeListItemSize.text = shoe.size.toString()
-            shoeListItemDescription.text = shoe.description
+            shoeItem = shoe
+            executePendingBindings()
         }
     }
 }

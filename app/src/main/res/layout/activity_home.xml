@@ -4,7 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <!--LinearLayout used for arranging the AppBarLayout and FragmentContainerView
-    in a cleaner approach for simple layouts like this one-->
+    in a cleaner approach for simple layouts like this one and it makes easier to load
+    the layout faster as compared to other layouts (eg.: RelativeLayout & ConstraintLayout)-->
 
     <LinearLayout xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
